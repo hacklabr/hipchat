@@ -31,3 +31,8 @@ Use the "Install Plugins" page in your wp-admin, or:
 = 1.0 =
 * Initial release.
 
+== Contributors ==
+
+* Artem Russakovskii (admin@beerpla.net)
+* Garret Heaton (garret@hipchat.com) 
+
