@@ -65,23 +65,18 @@ function hipchat_settings_page() {
 
     // make sure token is valid and room exists
     $hc = new HipChat($auth_token);
+    $successful = false;
     try {
-      $room_found = false;
-      $rooms = $hc->get_rooms();
-      foreach ($rooms as $room_data) {
-        if ($room_data->name == $room) {
-          $room_found = true;
-        }
+      $r = $hc->message_room($room, $from, "Plugin enabled successfully.");
+      if ($r) {
+        $successful = true;
       }
-      $token_valid = 1;
     } catch (HipChat_Exception $e) {
-      $token_valid = 0;
+      // token must have failed
     }
 
-    if (!$token_valid) {
-      $error = 'Auth token is invalid.';
-    } else if (!$room_found) {
-      $error = 'Room not found.';
+    if (!$successful) {
+      $error = 'Bad auth token or room name.';
     } else if (!$from) {
       $error = 'Please enter a "From Name"';
     } else if (!$room) {
