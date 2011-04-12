@@ -4,7 +4,7 @@ Donate link: https://www.hipchat.com
 Tags: chat, hipchat, notification, alert
 Requires at least: 2.9.0
 Tested up to: 3.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 This plugin allows you to send notifications about new published posts to a HipChat room.
 
@@ -27,6 +27,9 @@ Use the "Install Plugins" page in your wp-admin, or:
 1. This is what the message looks like.
 
 == Changelog ==
+
+= 1.2 =
+* Properly tag new release. This system and svn are weird. :p
 
 = 1.1 =
 * Use HTTPS when hitting API.

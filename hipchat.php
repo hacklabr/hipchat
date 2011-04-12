@@ -3,7 +3,7 @@
 Plugin Name: HipChat
 Plugin URI: http://www.hipchat.com
 Description: Send a message to a HipChat room whenever a post is published.
-Version: 1.0
+Version: 1.2
 Author: HipChat
 Author URI: http://www.hipchat.com
 License: GNU GPL v2
