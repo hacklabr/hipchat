@@ -7,7 +7,7 @@
  */
 class HipChat {
 
-  const DEFAULT_TARGET = 'http://api.hipchat.com';
+  const DEFAULT_TARGET = 'https://api.hipchat.com';
 
   /**
    * HTTP response codes from API
@@ -195,8 +195,8 @@ class HipChat {
 
 
 class HipChat_Exception extends Exception {
-	public function __construct($code, $info, $url) {
+  public function __construct($code, $info, $url) {
     $message = "HipChat API error: code=$code, info=$info, url=$url";
-		parent::__construct($message, (int)$code);
-	}
+    parent::__construct($message, (int)$code);
+  }
 }
